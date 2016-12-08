@@ -11,8 +11,3 @@ $(window).on('scroll', function () {
     }
 })
 
-//slick nav mobile
-
-$(function(){
-    $('#menu').slicknav();
-});
