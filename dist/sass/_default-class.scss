@@ -1,0 +1,56 @@
+.container-full-screen {
+  padding: 0 60px;
+}
+
+.col {
+  display: flex;
+  position: relative;
+  &.s6 {
+    width: 50%;
+  }
+  &.s12 {
+    width: 100%;
+  }
+}
+
+.slicknav_menu {
+  font-size: 23px;
+  display: none;
+  top: 0;
+  right: 0;
+  background: rgba(255,255,255,0.6);
+  .slicknav_menutxt {
+    display: none;
+  }
+  .slicknav_btn {
+    padding: 5px;
+    margin: 5px;
+    .slicknav_icon-bar + .slicknav_icon-bar {
+      margin-top: 0.23em;
+    }
+  }
+  .slicknav_icon {
+    margin: 0;
+  }
+  .slicknav_nav {
+    li {
+      text-align: right;
+      a {
+        color: #000;
+        &:hover{
+          background: #efefef;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  #menu {
+    display: none;
+  }
+
+  .slicknav_menu {
+    display: block;
+  }
+}
