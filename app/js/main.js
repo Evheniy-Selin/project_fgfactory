@@ -1,5 +1,15 @@
 //slick nav mobile
+(function ($) {
+    $(function () {
+        $('#menu').slicknav();
+    })
+})(jQuery);
 
-$(function(){
-    $('#menu').slicknav();
-});
+
+//slick slider
+(function ($) {
+    $(function () {
+        $('.carousel').slick(
+        );
+    });
+})(jQuery);
