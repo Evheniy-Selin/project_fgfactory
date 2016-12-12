@@ -2,6 +2,8 @@
 @import "custom-var";
 // fonts
 @import "fonts";
+//font awesome
+@import "font-awesome";
 //slick nav
 @import "slicknav";
 //slick slider
@@ -14,42 +16,93 @@
 @import "layout";
 
 main {
-  .full-screen {
-    height: 100vh;
-    width: 100%;
-    .carousel {
-      .slide {
-        position: relative;
-        .carousel-img {
-          img {
-            height: 100vh;
-            width: 100%;
-          }
-        }
-        .carousel-content {
-          position: absolute;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          align-content: center;
-          justify-content: center;
+  .sl_slider {
+    .slide {
+      display: flex;
+      justify-content: center;
+      .carousel-img {
+        img {
+          height: 100%;
           width: 100%;
-          top: 0;
-          bottom: 0;
-          color: #fff;
-          text-align: center;
-          img{
-            @extend %margin70;
+        }
+      }
+      .carousel-content {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        top: 0;
+        bottom: 0;
+        color: $whiteColorText;
+        text-align: center;
+        img {
+          @media (max-width: 1199px) {
+            height: 123px;
+            width: 115px;
           }
-          h3{
-            @extend %margin70;
-            font-size: 70px;
-          }
-          span{
-            font-size: 26px;
-            line-height: 1.6;
+          @media (max-width: 768px) {
+            height: 103px;
+            width: 95px;
           }
         }
+      }
+    }
+  }
+
+  .mage {
+    position: relative;
+    display: flex;
+    img {
+      height: 100%;
+      width: 100%;
+    }
+    .mage-content {
+      position: absolute;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      h3 {
+        margin-top: 220px;
+        margin-bottom: 50px;
+        @media (max-width: 991px) {
+          margin-bottom: 20px;
+        }
+      }
+      a {
+        margin-top: 85px;
+        @media (max-width: 991px) {
+          margin-top: 40px;
+        }
+      }
+    }
+  }
+
+  .cross-platform{
+    .settings-flex{
+      padding-left: 146px;
+      @media (max-width: 1280px) {
+        padding-left: 100px;
+      }
+    }
+  }
+
+  .about-us{
+    .settings-flex{
+      padding-left: 146px;
+      color: #000;
+      @media (max-width: 1280px) {
+        padding: 0 100px 0 100px;
+      }
+      h4{
+        color: #78859c;
+      }
+      p{
+        margin-bottom: 20px;
       }
     }
   }

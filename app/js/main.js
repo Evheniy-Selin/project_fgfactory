@@ -9,7 +9,8 @@
 //slick slider
 (function ($) {
     $(function () {
-        $('.carousel').slick(
-        );
+        $('.sl_slider').slick({
+            dots: true
+        });
     });
 })(jQuery);

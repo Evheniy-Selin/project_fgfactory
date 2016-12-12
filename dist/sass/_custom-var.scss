@@ -1,3 +1,11 @@
 %margin70{
   margin-bottom: 70px;
+  @media (max-width: 1199px) {
+    margin-bottom: 30px;
+  }
+  @media (max-width: 768px) {
+    margin-bottom: 20px;
+  }
 }
+
+$whiteColorText: #fff;

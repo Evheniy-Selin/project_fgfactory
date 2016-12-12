@@ -63,6 +63,15 @@
     float: left;
     height: 100%;
     min-height: 1px;
+    position: relative;
+    transition: transform .4s linear;
+    transform: translateX(0%);
+    &.translate-left{
+        transform: translateX(-10%);
+    }
+    &.translate-right{
+        transform: translateX(10%);
+    }
     [dir="rtl"] & {
         float: right;
     }
@@ -95,4 +104,15 @@
 }
 .slick-arrow.slick-hidden {
     display: none;
+}
+
+.slick-current{
+    transition: transform .4s linear;
+    transform: translateX(0%);
+    &.translate-left{
+        transform: translateX(-10%);
+    }
+    &.translate-right{
+        transform: translateX(10%);
+    }
 }
