@@ -53,3 +53,80 @@
         })
     })
 })(jQuery);
+
+
+(function ($) {
+    $(window).on('scroll', function () {
+
+    });
+})(jQuery);
+
+
+(function ($) {
+    $(window).on('load', function () {
+        $('body,html').animate({scrollTop: 0}, 100);
+
+        var animateElements = $('[data-animation]');
+
+        $('[data-animate="load"]').addClass('animate');
+
+
+        function isVisible(elem) {
+
+            var coords = elem.getBoundingClientRect();
+
+            var windowHeight = document.documentElement.clientHeight;
+
+
+            var topVisible = coords.top > 0 && coords.top < windowHeight;
+            var bottomVisible = coords.bottom < windowHeight && coords.bottom > 0;
+
+            return topVisible || bottomVisible;
+        }
+
+
+        var windowWidth = $(window).width();
+
+        if (windowWidth > 1024) {
+            $(window).on('scroll load', function () {
+                var scroll = $(window).scrollTop();
+                for (var i = 0; i < animateElements.length; i++) {
+                    var offsetTopBlock = $(animateElements[i]).offset().top;
+                    var activateHeight = offsetTopBlock * 0.8;
+
+                    if (isVisible(animateElements[i])) {
+                        $(animateElements[i]).addClass('animate')
+                    }
+                }
+            })
+        } else {
+            animateElements.addClass('animate');
+        }
+    });
+})(jQuery);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

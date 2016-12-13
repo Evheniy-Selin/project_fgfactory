@@ -54,6 +54,7 @@ main {
   .mage {
     position: relative;
     display: flex;
+    justify-content: center;
     img {
       height: 100%;
       width: 100%;
@@ -84,7 +85,7 @@ main {
 
   .cross-platform{
     .settings-flex{
-      padding-left: 146px;
+      padding-left: 139px;
       @media (max-width: 1280px) {
         padding-left: 100px;
       }
@@ -93,10 +94,13 @@ main {
 
   .about-us{
     .settings-flex{
-      padding-left: 146px;
+      padding-left: 139px;
       color: #000;
       @media (max-width: 1280px) {
         padding: 0 100px 0 100px;
+      }
+      @media (max-width: 991px) {
+        padding: 90px;
       }
       h4{
         color: #78859c;
