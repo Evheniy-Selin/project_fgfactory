@@ -7,6 +7,15 @@
   }
 }
 
+.wrapper{
+  background: #eee;
+}
+
+.container-work{
+  width: 1400px;
+  margin: 0 auto;
+}
+
 .full-screen {
   height: 100vh;
 }
@@ -358,9 +367,18 @@ main {
 }
 
 [data-animate] {
-  @extend %homePageBeforeAnimate;
+  .slide{
+    @extend %homePageBeforeAnimate;
+  }
+  &.animate{
+    .slide{
+      @extend %homePageAfterAnimate
+    }
+  }
+  .s6 {
+    @extend %homePageBeforeAnimate;
+  }
   &.animate {
-    @extend %homePageAfterAnimate;
     .s6 {
       @extend %homePageAfterAnimate;
       &:last-child {

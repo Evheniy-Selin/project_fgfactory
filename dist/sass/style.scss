@@ -126,3 +126,76 @@ main {
     }
   }
 }
+
+//work
+main {
+  .nav-bar {
+    padding-top: 200px;
+    display: flex;
+    justify-content: center;
+    ul {
+      padding: 10px;
+      li {
+        float: left;
+        font-size: 20px;
+        color: #000;
+        font-weight: 900;
+        & + li {
+          margin-left: 10px;
+
+        }
+        a {
+          font-weight: 900;
+          text-transform: uppercase;
+          font-size: 20px;
+          padding-right: 10px;
+          &:hover {
+            color: #e65100;
+          }
+        }
+      }
+    }
+  }
+  .content {
+    display: flex;
+    .game {
+      position: relative;
+      a {
+
+        z-index: 9999;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        -webkit-transition: all 0.5s linear;
+        -moz-transition: all 0.3s linear;
+        -ms-transition: all 0.3s linear;
+        -o-transition: all 0.3s linear;
+        transition: all 0.3s linear;
+        h6 {
+          font-size: 0;
+        }
+        span {
+          font-size: 0;
+        }
+        &:hover {
+          background: rgba(0, 0, 0, 0.6);
+          h6 {
+            font-size: 32px;
+          }
+          span {
+            font-size: 18px;
+          }
+        }
+        .game-text {
+          position: absolute;
+          text-align: center;
+          opacity: 0;
+          &:hover {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}
