@@ -35,6 +35,9 @@
 .s12 {
   @media (max-width: 991px) {
     width: 100%;
+    img{
+      width: 100%;
+    }
   }
 }
 
@@ -157,7 +160,12 @@ main {
       font-size: 38px;
       margin-bottom: 20px;
     }
-
+    @media (max-width: 768px) {
+      font-size: 32px;
+    }
+    @media (max-width: 450px) {
+      font-size: 25px;
+    }
   }
   h6 {
     font-size: 32px;
@@ -169,6 +177,9 @@ main {
     @media (max-width: 1280px) {
       font-size: 20px;
       margin-bottom: 40px;
+    }
+    @media (max-width: 768px) {
+      font-size: 18px;
     }
   }
 }
@@ -192,6 +203,12 @@ main {
   }
   @media (max-width: 991px) {
     padding: 90px;
+  }
+  @media (max-width: 768px) {
+    padding: 50px;
+  }
+  @media (max-width: 450px) {
+    padding: 20px
   }
   p {
     font-size: 18px;
@@ -330,23 +347,26 @@ main {
 }
 
 %homePageBeforeAnimate {
-  transition: opacity 0.8s 0s ease, transform 0.8s 0s ease;
+  transition: opacity 0.8s ease, transform 0.8s ease;
   opacity: 0;
   transform: translateY(60px);
-
 }
 
 %homePageAfterAnimate {
   opacity: 1;
   transform: translateY(0);
-
 }
 
-.full-screen {
-  &[data-animate] {
-    @extend %homePageBeforeAnimate
-    &.animate {
-      @extend %homePageAfterAnimate
+[data-animate] {
+  @extend %homePageBeforeAnimate;
+  &.animate {
+    @extend %homePageAfterAnimate;
+    .s6 {
+      @extend %homePageAfterAnimate;
+      &:last-child {
+        transition: opacity 0.9s 0.5s cubic-bezier(0.19, 1, 0.22, 1),
+        transform 0.9s 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+      }
     }
   }
 }

@@ -83,17 +83,26 @@ main {
     }
   }
 
-  .cross-platform{
-    .settings-flex{
+  .cross-platform {
+    .settings-flex {
       padding-left: 139px;
       @media (max-width: 1280px) {
         padding-left: 100px;
       }
+      @media (max-width: 991px) {
+        padding: 90px;
+      }
+      @media (max-width: 768px) {
+        padding: 50px;
+      }
+      @media (max-width: 450px) {
+        padding: 20px
+      }
     }
   }
 
-  .about-us{
-    .settings-flex{
+  .about-us {
+    .settings-flex {
       padding-left: 139px;
       color: #000;
       @media (max-width: 1280px) {
@@ -102,10 +111,16 @@ main {
       @media (max-width: 991px) {
         padding: 90px;
       }
-      h4{
+      @media (max-width: 768px) {
+        padding: 50px;
+      }
+      @media (max-width: 450px) {
+        padding: 20px
+      }
+      h4 {
         color: #78859c;
       }
-      p{
+      p {
         margin-bottom: 20px;
       }
     }
