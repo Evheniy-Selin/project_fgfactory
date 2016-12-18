@@ -8,6 +8,8 @@
 @import "slicknav";
 //slick slider
 @import "slick";
+//form styler
+@import "jquery.formstyler";
 // reset
 @import "reset";
 // default-class
@@ -15,6 +17,7 @@
 // layout
 @import "layout";
 
+//
 main {
   .sl_slider {
     .slide {
@@ -130,9 +133,11 @@ main {
 //work
 main {
   .nav-bar {
-    padding-top: 200px;
     display: flex;
     justify-content: center;
+    @media (max-width: 620px) {
+      justify-content: flex-start;
+    }
     ul {
       padding: 10px;
       li {
@@ -140,15 +145,34 @@ main {
         font-size: 20px;
         color: #000;
         font-weight: 900;
+        @media (max-width: 620px) {
+          float: none;
+        }
         & + li {
           margin-left: 10px;
-
+          @media (max-width: 620px) {
+            margin-left: 0;
+          }
+          &::before {
+            content: "/";
+            padding-right: 10px;
+            @media (max-width: 620px) {
+              display: none;
+            }
+          }
         }
         a {
           font-weight: 900;
           text-transform: uppercase;
           font-size: 20px;
-          padding-right: 10px;
+          padding-right: 5px;
+          @media (max-width: 991px) {
+            font-size: 18px;
+          }
+          @media (max-width: 768px) {
+            font-size: 14px;
+          }
+
           &:hover {
             color: #e65100;
           }
@@ -156,30 +180,53 @@ main {
       }
     }
   }
-  .content {
-    display: flex;
-    .game {
-      position: relative;
-      a {
 
-        z-index: 9999;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: #fff;
-        -webkit-transition: all 0.5s linear;
-        -moz-transition: all 0.3s linear;
-        -ms-transition: all 0.3s linear;
-        -o-transition: all 0.3s linear;
-        transition: all 0.3s linear;
+  .game {
+    position: relative;
+    overflow: hidden;
+    @media (max-width: 768px) {
+      width: 100%;
+      img {
+        width: 100%;
+      }
+    }
+    a {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 99;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      -webkit-transition: all 0.3s linear;
+      -moz-transition: all 0.3s linear;
+      -ms-transition: all 0.3s linear;
+      -o-transition: all 0.3s linear;
+      transition: all 0.3s linear;
+      .game-text {
+        position: absolute;
+        text-align: center;
+        & > * {
+          -webkit-transition: all 0.3s linear;
+          -moz-transition: all 0.3s linear;
+          -ms-transition: all 0.3s linear;
+          -o-transition: all 0.3s linear;
+          transition: all 0.3s linear;
+        }
         h6 {
           font-size: 0;
+          margin-bottom: 10px;
         }
         span {
           font-size: 0;
         }
-        &:hover {
-          background: rgba(0, 0, 0, 0.6);
+      }
+    }
+    &:hover {
+      a {
+        background: rgba(0, 0, 0, 0.6);
+        .game-text {
           h6 {
             font-size: 32px;
           }
@@ -187,15 +234,105 @@ main {
             font-size: 18px;
           }
         }
-        .game-text {
-          position: absolute;
-          text-align: center;
-          opacity: 0;
-          &:hover {
-            opacity: 1;
-          }
-        }
+      }
+      img {
+        -webkit-transition: all 0.3s linear;
+        -moz-transition: all 0.3s linear;
+        -ms-transition: all 0.3s linear;
+        -o-transition: all 0.3s linear;
+        transition: all 0.3s linear;
+        transform: scale(1.2);
       }
     }
   }
 }
+
+//contact
+main {
+  .wrapper-contact {
+    padding: 130px 0;
+    @media (max-width: 991px) {
+      padding: 100px 10px 10px;
+    }
+    .contact-form {
+      h4 {
+        text-align: center;
+        text-transform: none;
+        margin-bottom: 70px;
+        @media (max-width: 450px) {
+          font-size: 30px;
+        }
+      }
+      .fill-form {
+        position: relative;
+        display: flex;
+
+        ::-webkit-input-placeholder {
+          color: #fff;
+        }
+        ::-moz-placeholder {
+          color: #fff;
+        }
+        :-moz-placeholder {
+          color: #fff;
+        }
+        :-ms-input-placeholder {
+          color: #fff;
+        }
+
+        :focus::-webkit-input-placeholder {
+          color: transparent
+        }
+        :focus::-moz-placeholder {
+          color: transparent
+        }
+        :focus:-moz-placeholder {
+          color: transparent
+        }
+        :focus:-ms-input-placeholder {
+          color: transparent
+        }
+        .input-group {
+          margin-right: 50px;
+          input {
+            padding-left: 30px;
+            & + input {
+              margin-top: 50px;
+            }
+          }
+          select {
+            margin-top: 50px;
+          }
+        }
+        .commit-group {
+          textarea {
+            height: 100%;
+            resize: none;
+            padding: 40px 30px 30px;
+          }
+        }
+        @media (max-width: 991px) {
+          flex-direction: column;
+        }
+      }
+      .button {
+        margin: 70px 0;
+        text-align: center;
+      }
+    }
+  }
+
+  .input-style {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    color: #fff;
+    width: 100%;
+    border: 2px solid #fff;
+    height: 100px;
+    @media (max-width: 991px) {
+      height: 75px;
+    }
+  }
+}
+

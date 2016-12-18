@@ -52,7 +52,6 @@ header {
     background: url('../img/logo.png') no-repeat;
     background-size: 100% 100%;
     vertical-align: middle;
-
   }
   .logo-text {
     display: inline-block;
@@ -150,6 +149,37 @@ footer {
   }
 }
 
+//work page
+header {
+  .work {
+    .logo {
+      &:hover {
+        .logo-img {
+          background: url("../img/logo-orange.png") no-repeat;
+        }
+        .logo-text {
+          color: #e65100;
+        }
+      }
+      .logo-img {
+        background: url("../img/logo-blue.png");
+      }
+      .logo-text {
+        color: #3f51b5;
+      }
+    }
+    .header-nav {
+      li {
+        a{
+          color: #000;
+          &:hover {
+            color: #e65100;
+          }
+        }
+      }
+    }
+  }
+}
 
 
 

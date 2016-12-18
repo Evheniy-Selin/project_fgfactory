@@ -27,5 +27,12 @@ body {
   }
   button {
     border: none;
+    background: none;
+    cursor: pointer;
+  }
+  input, select, textarea {
+    border: none;
+    background: none;
+    box-sizing: border-box;
   }
 }
