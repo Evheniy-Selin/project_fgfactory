@@ -38,15 +38,11 @@
 
                     if (val.length > 2 && val != '' && rv_name.test(val)) {
                         $(this).addClass('not_error');
-                        $(this).next('.error-box').text('Принято')
-                            .css('color', 'green')
-
+                        $(this).next('.error-box').text(' ')
                     }
                     else {
                         $(this).removeClass('not_error').addClass('error');
-                        $(this).next('.error-box').html('* Please enter valid name')
-                            .css('color', 'red')
-                            .css('position', 'absolute')
+                        $(this).next('.error-box').html('* Please enter valid name.')
 
                     }
                     break;
@@ -61,9 +57,7 @@
                     }
                     else {
                         $(this).removeClass('not_error').addClass('error');
-                        $(this).next('.error-box').html('* Please enter valid email')
-                            .css('color', 'red')
-                            .css('position', 'absolute')
+                        $(this).next('.error-box').html('* Please enter valid email.')
 
                     }
                     break;
@@ -76,7 +70,7 @@
                     }
                     else {
                         $(this).removeClass('not_error').addClass('error');
-                        $(this).next('.error-box').html('fill in this field').css('color', 'red')
+                        $(this).next('.error-box').html('fill in this field.')
                     }
                     break;
             }

@@ -293,25 +293,46 @@ main {
           color: transparent
         }
         .input-group {
+          position: relative;
           margin-right: 50px;
           input {
             padding-left: 30px;
-            & + input {
-              margin-top: 50px;
-            }
            /* &:invalid {
               color: red;
             }*/
+          }
+          .second  {
+            margin-top: 50px;
           }
           select {
             margin-top: 50px;
           }
         }
         .commit-group {
+          position: relative;
           textarea {
             height: 100%;
             resize: none;
             padding: 40px 30px 30px;
+          }
+        }
+        .error-box {
+          position: absolute;
+          color: #ff5722;
+          &.name {
+            top: -20px;
+            left: 30px;
+          }
+          &.mail {
+            left: 30px;
+            top: 130px;
+            @media (max-width: 991px) {
+              top: 105px;
+            }
+          }
+          &.commit {
+            left: 30px;
+            top: -20px;
           }
         }
         @media (max-width: 991px) {
