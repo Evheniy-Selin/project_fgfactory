@@ -33,13 +33,14 @@
         <div class="contact-form ">
             <div class="container-work">
                 <h4>Heave a question? Let's talk!</h4>
-                <form action="">
+                <form action="" class="validate-this">
                     <div class="fill-form">
                         <div class="input-group s6 s12">
                             <input class="input-style" type="text" name="user-name" id="name" placeholder="Name"
-                                   pattern="[a-zA-Z]+">
+                                   pattern="[a-zA-Z]+" required autofocus>
                             <input class="input-style" type="email" name="user-email" id="email" placeholder="Email"
-                                   pattern="/\A[^@]+@([^@\.]+\.)+[^@\.]+\z/">
+                                   pattern="/\A[^@]+@([^@\.]+\.)+[^@\.]+\z/" required
+                                   data-error="Please enter a valid email adress">
                             <select>
                                 <option value="" disabled selected>Subject</option>
                                 <option value="">Услуга 1</option>

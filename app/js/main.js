@@ -5,7 +5,6 @@
     })
 })(jQuery);
 
-
 //slick slider
 (function ($) {
     $(function () {
@@ -15,8 +14,9 @@
     });
 })(jQuery);
 
-(function($) {
-    $(function() {
+//form styler
+(function ($) {
+    $(function () {
         $('select').styler();
     });
 })(jQuery);

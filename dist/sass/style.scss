@@ -299,6 +299,9 @@ main {
             & + input {
               margin-top: 50px;
             }
+            &:invalid {
+              color: red;
+            }
           }
           select {
             margin-top: 50px;
@@ -336,3 +339,7 @@ main {
   }
 }
 
+.validate-this .error-text {
+  display: block;
+  color: red;
+}
