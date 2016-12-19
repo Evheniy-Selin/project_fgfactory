@@ -35,10 +35,11 @@
                 <h4>Heave a question? Let's talk!</h4>
                 <form action="">
                     <div class="fill-form">
-
                         <div class="input-group s6 s12">
-                            <input class="input-style" type="text" name="user-name" id="name" placeholder="Name">
-                            <input class="input-style" type="email" name="user-email" id="email" placeholder="Email">
+                            <input class="input-style" type="text" name="user-name" id="name" placeholder="Name"
+                                   pattern="[a-zA-Z]+">
+                            <input class="input-style" type="email" name="user-email" id="email" placeholder="Email"
+                                   pattern="/\A[^@]+@([^@\.]+\.)+[^@\.]+\z/">
                             <select>
                                 <option value="" disabled selected>Subject</option>
                                 <option value="">Услуга 1</option>
@@ -47,18 +48,15 @@
                                 <option value="">Услуга 4</option>
                             </select>
                         </div>
-
                         <div class="commit-group s6 s12">
                             <textarea class="input-style" name="" id="" cols="30" rows="10"
                                       placeholder="Message"></textarea>
                         </div>
                     </div>
-
                     <div class="button">
-                        <a href="#" class="btn">send message</a>
+                        <button type="submit" class="btn">send message</button>
                     </div>
                 </form>
-
             </div>
         </div>
     </div>
