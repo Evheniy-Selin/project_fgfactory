@@ -33,14 +33,16 @@
         <div class="contact-form ">
             <div class="container-work">
                 <h4>Heave a question? Let's talk!</h4>
-                <form action="" class="validate-this">
+                <form action="" id="feedback-form">
                     <div class="fill-form">
                         <div class="input-group s6 s12">
-                            <input class="input-style" type="text" name="user-name" id="name" placeholder="Name"
-                                   pattern="[a-zA-Z]+" required autofocus>
-                            <input class="input-style" type="email" name="user-email" id="email" placeholder="Email"
-                                   pattern="/\A[^@]+@([^@\.]+\.)+[^@\.]+\z/" required
-                                   data-error="Please enter a valid email adress">
+
+                            <input class="input-style" type="text" name="user-name" id="name" placeholder="Name">
+                            <div class="error-box"></div>
+
+                            <input class="input-style" type="email" name="user-email" id="email" placeholder="Email">
+                            <div class="error-box"></div>
+
                             <select>
                                 <option value="" disabled selected>Subject</option>
                                 <option value="">Услуга 1</option>
@@ -48,20 +50,25 @@
                                 <option value="">Услуга 3</option>
                                 <option value="">Услуга 4</option>
                             </select>
+
                         </div>
                         <div class="commit-group s6 s12">
-                            <textarea class="input-style" name="" id="" cols="30" rows="10"
+
+                            <textarea class="input-style" name="" id="message" cols="30" rows="10"
                                       placeholder="Message"></textarea>
+                            <div class="error-box"></div>
+
                         </div>
                     </div>
+
                     <div class="button">
-                        <button type="submit" class="btn">send message</button>
+                        <button type="submit" class="btn" id="send">send message</button>
                     </div>
+
                 </form>
             </div>
         </div>
     </div>
-
 </main>
 
 <footer>
